@@ -53,7 +53,6 @@ app.post('/api/todos/done', function(req, res) {
       var todoList = JSON.parse(data);
       var todoId = parseInt(req.body.todoId);
       todoList = todoList.map(function(todo) {
-        debugger;
         if (todoId === todo.id) todo.done = true;
         return todo;
       });
